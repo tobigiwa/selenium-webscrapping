@@ -1,0 +1,5 @@
+/__pycache__
+/a_scraper_venv
+/log_folder
+/result_tsv
+*.ipynb
