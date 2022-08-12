@@ -87,3 +87,6 @@ class ScrapeEvent:
             pass
         else:
             return eventinfo
+        
+        
+
