@@ -1,3 +1,3 @@
-# Coming soon..., cooking already
+# Coming soon... cooking already
 
-# Creating a dataset with webscrapping
+## Creating a dataset with webscrapping using selenium
