@@ -118,16 +118,16 @@ class ScrapeEvent:
             return ''
         else:
             if args or kwargs == 'free':
-                return dict(type='free', price='***', currency='***')
+                return dict(type='free', price='', currency='')
             else:
                 pass
 
 
-    def org_profile(self, *args, **kwargs) -> str:
-        if not args or kwargs:
+    def org_profile(self, x:str) -> str:
+        if not x:
             return ''
         else:
-            pass
+            return x
 
 
     def org_name(self, x:str) -> str:
@@ -207,7 +207,7 @@ class ScrapeEvent:
             contact_email = WebDriverWait(self.web_browser_driver, 5).until(
                 EC.presence_of_element_located((By.ID, 'aos-ContactEmail'))
             ).text
-            a = dict(name=contact_name, email=contact_email)
+            a = [contact_email]
         except:
             logger.error('contact_mail Function failed', exc_info=True)
         else:

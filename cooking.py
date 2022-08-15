@@ -91,10 +91,11 @@ try:
                 logger.error(f'{driver.tickect_list.__name__} Function failed', exc_info=True)
                 record['ticketlist'] = '###'
 
+            profile = 'Riviera has been providing the maritime, offshore and energy communities with quality multi-platform media services for over 20 years.'
 
             # 8 BLOCK CODE: scraping attribute orgProfile
             try:
-                sc_org_profile = driver.org_profile()
+                sc_org_profile = driver.org_profile(profile)
                 record['orgProfile'] = sc_org_profile
             except:
                 logger.error(driver.org_profile.__name__, 'Function failed', exc_info=True)
@@ -177,7 +178,7 @@ try:
             # 20 BLOCK CODE: scraping attribute googlePlaceUrl
             try:
                 if sc_timing['country'] == 'ONLINE':
-                    record['googlePlaceUrl'] = 'ONLINE'
+                    record['googlePlaceUrl'] = ''
                 else:
                     a = driver.google_map_url(sc_timing['venue'], sc_timing['city'], sc_timing['country'])
                     record['googlePlaceUrl'] = a

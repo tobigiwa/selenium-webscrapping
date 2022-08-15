@@ -4,4 +4,5 @@
 /result_tsv
 *.ipynb
 /jup*
-test.py
+/riviera
+test.py 
