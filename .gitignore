@@ -3,3 +3,5 @@
 /log_folder
 /result_tsv
 *.ipynb
+/jup*
+test.py
