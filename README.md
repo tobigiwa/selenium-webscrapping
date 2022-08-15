@@ -8,13 +8,13 @@ This project demonstrates an elaborate webscraping program that spans mutilple w
 
 Automaing and designing a maintainable codebase for scraping mutiple webpages using Selenium with python.
 
-* > A script(soup.py) of a Python Class with it only attribute as the browser driver and **it methods are function doing a singular scraping job**.
+* A script(soup.py) of a Python Class with it only attribute as the browser driver and **it methods are function doing a singular scraping job**.
 
-* > A script(cooking.py) with a context manager variable calling each function and appending the scrape data to a list of dictionaries.
+* A script(cooking.py) with a context manager variable calling each function and appending the scrape data to a list of dictionaries.
 
-* > A script(chopping.py) responsible for managing extra transformation needed for the scrape data.
+* A script(chopping.py) responsible for managing extra transformation needed for the scrape data.
 
-* > A script(create_log.py) to create logging for our code.
+* A script(create_log.py) to create logging for our code.
 
 ## Running the script
 
