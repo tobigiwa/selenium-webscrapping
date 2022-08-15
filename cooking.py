@@ -121,7 +121,7 @@ try:
 
 
             # 11 BLOCK CODE: scraping attribute logo
-            record['logo'] = '***'
+            record['logo'] = ''
 
 
             # 12 BLOCK CODE: scraping attribute sponsor
@@ -145,9 +145,9 @@ try:
 
 
             #14 BLOCK CODE: scraping attribute type
-            record['type'] = '***'
+            record['type'] = ''
             #15 BLOCK CODE: scraping attribute category
-            record['category'] = '***'
+            record['category'] = ''
 
 
             try:

@@ -115,7 +115,7 @@ class ScrapeEvent:
 
     def tickect_list(self, *args, **kwargs) -> dict:
         if not args or kwargs:
-            return '***'
+            return ''
         else:
             if args or kwargs == 'free':
                 return dict(type='free', price='***', currency='***')
@@ -125,7 +125,7 @@ class ScrapeEvent:
 
     def org_profile(self, *args, **kwargs) -> str:
         if not args or kwargs:
-            return '***'
+            return ''
         else:
             pass
 
@@ -188,10 +188,10 @@ class ScrapeEvent:
             map_url = WebDriverWait(self.web_browser_driver,10).until(
                     EC.element_to_be_clickable((By.LINK_TEXT, 'Maps'))
                 )
-            map_url = map_url.click()
-            time.sleep(4)
-            map_url = self.web_browser_driver.current_urls
-            time.sleep(1.5)
+            map_url.click()
+            time.sleep(3)
+            map_url = self.web_browser_driver.current_url
+            time.sleep(1)
         except:
             logger.error('google_map_url Function failed', exc_info=True)
         else:

@@ -49,19 +49,19 @@ def time_transformation(x:str, y:str) -> dict:
         y = y.split('-')
         time_zone, country = y[0].strip().upper(), y[1].strip().upper()
 
-        return dict(start_time=start_time, end_time=end_time, venue='***', city='***', country=country, time_zone=time_zone)
+        return dict(start_time=start_time, end_time=end_time, venue='', city='', country=country, time_zone=time_zone)
 
     elif len(y.split()) == 1: # accounting single value e,g 'LONDON'
         y = y.upper()
         country = y
-        return dict(start_time=start_time, end_time=end_time, venue='***', city='***', country=country, time_zone='***')
+        return dict(start_time=start_time, end_time=end_time, venue='', city='', country=country, time_zone='')
 
 
     else:                   # acoounting for values like 'ABCD, DEFG' and 'AB, CD, ED' as venue, city and country
         y = y.split(',')
         if len(y) == 2:
             city, country =y[0].strip().upper(), y[1].strip().upper()
-            return dict(start_time=start_time, end_time=end_time, venue='***', city=city, country=country, time_zone='***')
+            return dict(start_time=start_time, end_time=end_time, venue='', city=city, country=country, time_zone='')
 
         elif len(y) == 3:
             venue, city, country = y[0].strip().upper(), y[1].strip().upper(), y[2].strip().upper()
